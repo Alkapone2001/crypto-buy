@@ -1,23 +1,15 @@
 {
-  "name": "backend",
+  "name": "crypto-buy",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Crypto-buy full-stack application",
+  "private": true,
+  "workspaces": [
+    "front",
+    "back"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "bcryptjs": "^3.0.3",
-    "cors": "^2.8.6",
-    "dotenv": "^17.4.2",
-    "express": "^5.2.1",
-    "jsonwebtoken": "^9.0.3",
-    "nodemailer": "^8.0.7",
-    "sql.js": "^1.14.1",
-    "stripe": "^22.1.0",
-    "uuid": "^14.0.0"
+    "install-all": "npm install && npm install --workspace=front && npm install --workspace=back",
+    "build": "npm run build --workspace=front",
+    "dev": "npm run dev --workspace=front & npm run dev --workspace=back"
   }
 }
